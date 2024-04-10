@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Internship</title>
+</head>
+
+<body class="mt-* mr-* ml-* mb-* pt-* pr-* pl-* pb-* box-border">
+    <div class=" flex min-h-screen">
+        <aside id="sidebar" class=" bg-purple-300 w-64 h-auto">
+            <div class="h-14 flex items-center justify-center bg-purple-500">
+                <div class="rounded-full relative inline-flex bg-purple-100 w-10 h-10 items-center justify-center ">
+                    <span class="font-medium">GK</span>
+                </div>
+
+                <div>
+                    <h1 class=" text-xl m-1 font-semibold text-black">&nbsp; Gurukul ERP</h1>
+                </div>
+            </div>
+            <div class="w-64 h-screen">
+                <ul>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 items-center"><a class="no-underline"
+                                href="index.html" target="_blank"><i class="fa fa-home px-1 py-3" aria-hidden="true"></i> &nbsp;
+                                <span>Dashboard</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-centers"><a class="no-underline"
+                                href="#"><i class="fa fa-credit-card px-1 py-4" aria-hidden="true"></i>&nbsp; <span>Fees
+                                    & Payment</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-users px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Students</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-calendar px-1 py-3" aria-hidden="true"></i>&nbsp; <span>Time
+                                    Table</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-question-circle px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Quiz</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-graduation-cap px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Admissions</span></a></li>
+                    </div>
+                    <div class="px-3 flex justify-between items-center hover:bg-purple-400 bg-purple-400" onclick="dropdown()">
+                        <div>
+                            <li class="list-none font-medium py-3 px-1 flex items-center">
+                                <a class="no-underline flex items-center" href="#" target="_blank">
+                                    <div><i class="fa fa-signal px-1 py-3" aria-hidden="true"></i></div>
+                                    <div class="flex w-full items-center ml-1"><span>&nbsp; Results</span></div>
+                                </a>
+                            </li>
+                        </div>
+                        <span class="text-lg rotate-180" id="arrow"><i class="fa fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-sm text-left font-thin mt-2 w-4/5 mx-auto" id="submenu">
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="result.html" target="_blank">Result Data</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="view.html" target="_blank">View Result</a></h1>
+                        <div class="bg-purple-400">
+                            <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="design.html" target="_blank">Result Design</a></h1>
+                        </div>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="analyzer.html" target="_blank">Result Analyzer</a></h1>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-puzzle-piece px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Departments</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-bell px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Notifications</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-cogs px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Settings</span></a></li>
+                    </div>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                function dropdown(){
+                    document.querySelector('#submenu').classList.toggle('hidden');
+                    document.querySelector('#arrow').classList.toggle('rotate-0');
+                }
+                dropdown()
+            </script>
+        </aside>
+    <div class=" right-0  md:w-screen bg-purple-200">
+        <div class="top-0 right-0 w-[95vm] h-14 flex items-center justify-center shadow-md">
+            <div class="w-11/12 flex items-center">
+                <div class="flex-[3] flex justify-center">    
+                    <input type="text" class="bg-purple-200 border-none p-2 w-1/2" placeholder="search...."> 
+                    <button type="submit" class="w-10 h-10 border-none items-center justify-center"><i class="fa fa-search" aria-hidden="true"></i></button>               
+                </div>
+                <div class="flex-1 flex justify-between items-center">
+                    <a href="#" class="py-1 px-2 text-center"></a>
+                    <div class="flex-1 flex justify-between items-center">
+                        <a href="#" class="py-1 px-2 text-center"></a>
+                        <div class="relative inline-block">
+                            <!-- Trigger element -->
+                            <div class="flex items-center space-x-2" id="profileTrigger">
+                              <img src="avatar-removebg-preview.png" alt="Profile Image" class="w-10 h-10 rounded-full">
+                            
+                            </div>
+                            
+                            <!-- Profile popover -->
+                            <div class="hidden absolute z-10 -mt-4 p-2 bg-white shadow-md rounded-md" id="profilePopover">
+                              <div class="text-gray-800">Change avatar</div>
+                              <div class="text-gray-500">help</div>
+                              <div class="text-gray-500">Logout</div>
+                              <!-- Additional profile information -->
+                            </div>
+                          </div>
+                          
+                          <script>
+                            const profileTrigger = document.getElementById('profileTrigger');
+                            const profilePopover = document.getElementById('profilePopover');
+                          
+                            // Event listener for mouse enter to show profile popover
+                            profileTrigger.addEventListener('mouseenter', () => {
+                              profilePopover.classList.remove('hidden');
+                            });
+                          
+                            // Event listener for mouse leave to hide profile popover
+                            profileTrigger.addEventListener('mouseleave', () => {
+                              profilePopover.classList.add('hidden');
+                            });
+                          </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 ml-8">
+            <ul>
+                <li class="list-disc text-xl"><b>DESIGN 1</b></li>
+            </ul>
+        </div>
+        <div class="border-2 md:h-auto md:w-auto m-40 mt-12 border-black bg-gradient-to-br from-red-100 to-rose-200">
+            <div class="border-[1px] border-black m-3 md:h-auto">
+                <h1 class="text-center mt-2"><b>RAJIV GANDHI PROUGDYOGIKI VISHWAVIDYALAYA, BHOPAL</h1>
+                    <h2 class="text-center">(UNIVERSITY OF TECHNOLOGY OF MADHYA PRADESH)</b></h2>
+                </div>
+          <h4 class="text-center mt-12">EXAMINATION JANUARY-2024</h4>
+          <h5 class="text-center">B.tech(Computer Science & Engineering)</h5>
+          <div class="flex justify-between">
+          <div>
+              <div class="flex">
+                  <h5 class=" mt-7 ml-5"><b>ROLL NO.</b></h5>
+                  <h4 class="ml-20 mt-7">:05</h4>
+                </div>
+                <div class="flex">
+                    <h5 class="ml-5"><b>NAME</b></h5>
+                    <h4 class="ml-[102px]">:SIYA PATEL</h4>
+                </div><div class="flex">
+                    <h5 class="ml-5"><b>FATHER'S NAME</b></h5>
+                    <h4 class="ml-6">:GIRISH PATEL</h4>
+                </div>
+                <div class="flex">
+                    <h5 class="ml-5"><b>INSTT</b></h5>
+                    <h4 class="ml-[102px]">:Sri Dadaji Institute of Technology & Science,Khandwa</h4>
+                </div>
+                <div class="flex">
+                    <h5 class="ml-5"><b>SEMESTER</b></h5>
+                    <h4 class="ml-[70px]">:THIRD</h4>
+                </div>
+                </div>
+                <div class="mt-7">
+                    <img class="md:w-28 md:h-28" src="passport-removebg-preview.png">
+                    </div>
+                    </div>
+                    <div class="mt-10 flex justify-center">
+                        <table class="md:w-[90%]">
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black"><b>SUBJECT CODE</b></th>
+                                <th class="border-x-[1px] border-black"><b>SUBJECT NAME</b></th>
+                                <th class="border-x-[1px] border-black"><b>MARKS OBTAINED</b></th>
+                                <th class="border-x-[1px] border-black"><b>TOTAL MARKS</b></th>
+                                <th class="border-x-[1px] border-black"><b>GRADE</b></th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">BT301[T]</th>
+                                <th class="border-x-[1px] border-black">EEES</th>
+                                <th class="border-x-[1px] border-black">70</th>
+                                <th class="border-x-[1px] border-black">100</th>
+                                <th class="border-x-[1px] border-black">B</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS302[T]</th>
+                                <th class="border-x-[1px] border-black">Discrete Structure</th>
+                                <th class="border-x-[1px] border-black">59</th>
+                                <th class="border-x-[1px] border-black">100</th>
+                                <th class="border-x-[1px] border-black">B</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS303[T]</th>
+                                <th class="border-x-[1px] border-black">Data Structure</th>
+                                <th class="border-x-[1px] border-black">47</th>
+                                <th class="border-x-[1px] border-black">70</th>
+                                <th class="border-x-[1px] border-black">B</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS304[T]</th>
+                                <th class="border-x-[1px] border-black">Digital System</th>
+                                <th class="border-x-[1px] border-black">52</th>
+                                <th class="border-x-[1px] border-black">70</th>
+                                <th class="border-x-[1px] border-black">B</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS305[T]</th>
+                                <th class="border-x-[1px] border-black">OOPM</th>
+                                <th class="border-x-[1px] border-black">62</th>
+                                <th class="border-x-[1px] border-black">70</th>
+                                <th class="border-x-[1px] border-black">A</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS303[P]</th>
+                                <th class="border-x-[1px] border-black">Data Structure</th>
+                                <th class="border-x-[1px] border-black">26</th>
+                                <th class="border-x-[1px] border-black">30</th>
+                                <th class="border-x-[1px] border-black">A</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS304[P]</th>
+                                <th class="border-x-[1px] border-black">Digital System</th>
+                                <th class="border-x-[1px] border-black">28</th>
+                                <th class="border-x-[1px] border-black">30</th>
+                                <th class="border-x-[1px] border-black">A</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-x-[1px] border-black">CS305[P]</th>
+                                <th class="border-x-[1px] border-black">OOPM</th>
+                                <th class="border-x-[1px] border-black">28</th>
+                                <th class="border-x-[1px] border-black">30</th>
+                                <th class="border-x-[1px] border-black">A</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="border-[1px] border-black"></th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th>RESULT &nbsp; &nbsp; &nbsp; :PASS</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th>Issue Date &nbsp; &nbsp; &nbsp; :14/03/2024</th>
+                            </tr>
+                            <tr class="border-[1px] border-black">
+                                <th class="pt-16">Prepared By</th>
+                                <th class="pt-16">Checked By</th>
+                                <th class="pt-16">Signature of Principal</th>
+                                <th class="pt-16">Controller of Examination</th>
+                            </tr>
+                        </table>
+                            </div>
+                            <div class="mt-11">
+                            </div>
+                        </div>
+        </div>
+    </div>
+    </body>
+    </html>

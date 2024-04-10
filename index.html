@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Internship</title>
+</head>
+
+<body class="mt-* mr-* ml-* mb-* pt-* pr-* pl-* pb-* box-border">
+    <div class=" flex min-h-screen">
+        <aside id="sidebar" class=" bg-purple-300 w-64 h-auto">
+            <div class="h-14 flex items-center justify-center bg-purple-500">
+                <div class="rounded-full relative inline-flex bg-purple-100 w-10 h-10 items-center justify-center ">
+                    <span class="font-medium">GK</span>
+                </div>
+
+                <div>
+                    <h1 class=" text-xl m-1 font-semibold text-black">&nbsp; Gurukul ERP</h1>
+                </div>
+            </div>
+            <div class="w-64 h-screen">
+                <ul>
+                    <div class="px-3 flex hover:bg-purple-400 bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 items-center"><a class="no-underline"
+                                href="index.html" target="_blank"><i class="fa fa-home px-1 py-3" aria-hidden="true"></i> &nbsp;
+                                <span>Dashboard</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-centers"><a class="no-underline"
+                                href="#"><i class="fa fa-credit-card px-1 py-4" aria-hidden="true"></i>&nbsp; <span>Fees
+                                    & Payment</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-users px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Students</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-calendar px-1 py-3" aria-hidden="true"></i>&nbsp; <span>Time
+                                    Table</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-question-circle px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Quiz</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-graduation-cap px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Admissions</span></a></li>
+                    </div>
+                    <div class="px-3 flex justify-between items-center hover:bg-purple-400" onclick="dropdown()">
+                        <div>
+                            <li class="list-none font-medium py-3 px-1 flex items-center">
+                                <a class="no-underline flex items-center" href="#" target="_blank">
+                                    <div><i class="fa fa-signal px-1 py-3" aria-hidden="true"></i></div>
+                                    <div class="flex w-full items-center ml-1"><span>&nbsp; Results</span></div>
+                                </a>
+                            </li>
+                        </div>
+                        <span class="text-lg rotate-180" id="arrow"><i class="fa fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-sm text-left font-thin mt-2 w-4/5 mx-auto" id="submenu">
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="result.html" target="_blank">Result Data</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="view.html" target="_blank">View Result</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="design.html" target="_blank">Result Design</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="analyzer.html" target="_blank">Result Analyzer</a></h1>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-puzzle-piece px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Departments</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-bell px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Notifications</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-cogs px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Settings</span></a></li>
+                    </div>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                function dropdown(){
+                    document.querySelector('#submenu').classList.toggle('hidden');
+                    document.querySelector('#arrow').classList.toggle('rotate-0');
+                }
+                dropdown()
+            </script>
+        </aside>
+    <div class=" right-0  w-screen bg-purple-200">
+        <div class="top-0 right-0 w-[95vm] h-14 flex items-center justify-center shadow-md">
+            <div class="w-11/12 flex items-center">
+                <div class="flex-[3] flex justify-center">    
+                    <input type="text" class="bg-purple-200 border-none p-2 w-1/2" placeholder="search...."> 
+                    <button type="submit" class="w-10 h-10 border-none items-center justify-center"><i class="fa fa-search" aria-hidden="true"></i></button>               
+                </div>
+                <div class="flex-1 flex justify-between items-center">
+                    <a href="#" class="py-1 px-2 text-center"></a>
+                    <div class="relative inline-block">
+                        <!-- Trigger element -->
+                        <div class="flex items-center space-x-2" id="profileTrigger">
+                          <img src="avatar-removebg-preview.png" alt="Profile Image" class="w-10 h-10 rounded-full">
+                        
+                        </div>
+                        
+                        <!-- Profile popover -->
+                        <div class="hidden absolute z-10 -mt-4 p-2 bg-white shadow-md rounded-md" id="profilePopover">
+                          <div class="text-gray-800">Change avatar</div>
+                          <div class="text-gray-500">help</div>
+                          <div class="text-gray-500">Logout</div>
+                          <!-- Additional profile information -->
+                        </div>
+                      </div>
+                      
+                      <script>
+                        const profileTrigger = document.getElementById('profileTrigger');
+                        const profilePopover = document.getElementById('profilePopover');
+                      
+                        // Event listener for mouse enter to show profile popover
+                        profileTrigger.addEventListener('mouseenter', () => {
+                          profilePopover.classList.remove('hidden');
+                        });
+                      
+                        // Event listener for mouse leave to hide profile popover
+                        profileTrigger.addEventListener('mouseleave', () => {
+                          profilePopover.classList.add('hidden');
+                        });
+                      </script>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 ml-8">
+            <ul>
+                <li class="list-disc text-xl"><b>DASHBOARD</b></li>
+            </ul>
+        </div>
+        <div class="relative mt-14 min-h-96">
+            <div class="py-5 px-4 flex items-center justify-between flex-wrap">
+                <div class="w-60 h-36 my-5 mx-2 bg-blue-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>2196</b></h1>
+                        <h3 class="text-gray-800">Students</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="student-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="w-60 h-36 my-5 mx-2 bg-indigo-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>53</b></h1>
+                        <h3 class="text-gray-800">Teachers</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="teacher1-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="w-60 h-36 my-5 mx-2 bg-violet-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>10</b></h1>
+                        <h3 class="text-gray-800">Courses</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="course2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="w-60 h-36 my-5 mx-2 bg-cyan-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>137</b></h1>
+                        <h3 class="text-gray-800">Review</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="review2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items-center ml-5 shadow-lg ">
+            <div class="min-h-32 flex justify-evenly items-start flex-wrap">
+                <div class="min-h-96 mt-0 mr-6 ml-6 mb-6 flex-[5] bg-purple-400 shadow-2xl flex flex-col">  
+                    <div class="flex items-center justify-around py-4 px-2 border-b-2 border-solid border-gray-700">
+                        <h2><b>Recent Admissions</b></h2>
+                        <a href="#" class="bg-purple-400 py-1 px-2 text-center font-bold">View All</a>
+                    </div>  
+                    <table class="p-3">
+                        <tr>
+                            <th class="text-left p-2">Name</th>
+                            <th class="text-left p-2">University</th>
+                            <th class="text-left p-2">Course</th>
+                            <th class="text-left p-2">Date</th>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-2">Sanjay Shukla</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">27 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Sarika Patel</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">27 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Tejas Prajapati</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">25 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Krish Kasde</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">23 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Kashish Gupta</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">22 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Ashwini Verma</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">22 MARCH</td>
+                        </tr><tr>
+                            <td class="text-left p-2">Khushi Singh</td>
+                            <td class="text-left p-2">RGPV</td>
+                            <td class="text-left p-2">B.Tech</td>
+                            <td class="text-left p-2">21 MARCH</td>
+                        </tr>
+                    </table>               
+                </div>
+                <div class="min-h-96 mt-0 mr-6  flex-[2] bg-purple-400 shadow-2xl flex flex-col">   
+                    <div class="flex items-center justify-around py-4 px-2 border-b-2 border-solid border-gray-700">
+                        <h2><b>New Students</b></h2>
+                        <a href="#" class="bg-purple-400 py-1 px-2 text-center"><b>View All</b></a>
+                    </div> 
+                    <table class="p-3">
+                        <tr>
+                            <th class="text-left p-2">Profile</th>
+                            <th class="text-left p-2">Name</th>
+                            <th class="text-left p-2">Joined</th>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-1"><img class="h-10 w-10" src="sanjay-removebg-preview.png" alt=""></td>
+                            <td class="text-left p-1">Sanjay Shukla</td>
+                            <td class="text-left p-1">27 MARCH</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-1"><img class="h-10 w-10" src="sarika-removebg-preview.png" alt=""></td>
+                            <td class="text-left p-1">Sarika Patel</td>
+                            <td class="text-left p-1">27 MARCH</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-1"><img class="h-10 w-10" src="tejas-removebg-preview.png" alt=""></td>
+                            <td class="text-left p-1">Tejas Prajapati</td>
+                            <td class="text-left p-1">25 MARCH</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-1"><img class="h-10 w-10" src="krish-removebg-preview.png" alt=""></td>
+                            <td class="text-left p-1">Krish Kasde</td>
+                            <td class="text-left p-1">23 MARCH</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left p-1"><img class="h-10 w-10" src="kashish-removebg-preview.png" alt=""></td>
+                            <td class="text-left p-1">Kashish Gupta</td>
+                            <td class="text-left p-1">22 MARCH</td>
+                        </tr>
+                    </table>                        
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

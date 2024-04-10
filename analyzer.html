@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Internship</title>
+</head>
+
+<body class="mt-* mr-* ml-* mb-* pt-* pr-* pl-* pb-* box-border">
+    <div class=" flex min-h-screen">
+        <aside id="sidebar" class=" bg-purple-300 w-64 h-auto">
+            <div class="h-14 flex items-center justify-center bg-purple-500">
+                <div class="rounded-full relative inline-flex bg-purple-100 w-10 h-10 items-center justify-center ">
+                    <span class="font-medium">GK</span>
+                </div>
+
+                <div>
+                    <h1 class=" text-xl m-1 font-semibold text-black">&nbsp; Gurukul ERP</h1>
+                </div>
+            </div>
+            <div class="w-64 h-screen">
+                <ul>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 items-center"><a class="no-underline"
+                                href="index.html" target="_blank"><i class="fa fa-home px-1 py-3" aria-hidden="true"></i> &nbsp;
+                                <span>Dashboard</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-centers"><a class="no-underline"
+                                href="#"><i class="fa fa-credit-card px-1 py-4" aria-hidden="true"></i>&nbsp; <span>Fees
+                                    & Payment</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-users px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Students</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-calendar px-1 py-3" aria-hidden="true"></i>&nbsp; <span>Time
+                                    Table</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-question-circle px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Quiz</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-graduation-cap px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Admissions</span></a></li>
+                    </div>
+                    <div class="px-3 flex justify-between items-center hover:bg-purple-400 bg-purple-400" onclick="dropdown()">
+                        <div>
+                            <li class="list-none font-medium py-3 px-1 flex items-center">
+                                <a class="no-underline flex items-center" href="#" target="_blank">
+                                    <div><i class="fa fa-signal px-1 py-3" aria-hidden="true"></i></div>
+                                    <div class="flex w-full items-center ml-1"><span>&nbsp; Results</span></div>
+                                </a>
+                            </li>
+                        </div>
+                        <span class="text-lg rotate-180" id="arrow"><i class="fa fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-sm text-left font-thin mt-2 w-4/5 mx-auto" id="submenu">
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="result.html" target="_blank">Result Data</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="view.html" target="_blank">View Result</a></h1>
+                        <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="design.html" target="_blank">Result Design</a></h1>
+                        <div class=" bg-purple-400">
+                            <h1 class="cursor-pointer p-2 hover:bg-purple-400 mt-1 font-semibold"><a href="analyzer.html" target="_blank">Result Analyzer</a></h1>
+                        </div>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-puzzle-piece px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Departments</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-bell px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Notifications</span></a></li>
+                    </div>
+                    <div class="px-3 flex hover:bg-purple-400">
+                        <li class="list-none font-medium py-3 px-1 flex items-center"><a class="no-underline"
+                                href="#"><i class="fa fa-cogs px-1 py-3" aria-hidden="true"></i>&nbsp;
+                                <span>Settings</span></a></li>
+                    </div>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                function dropdown(){
+                    document.querySelector('#submenu').classList.toggle('hidden');
+                    document.querySelector('#arrow').classList.toggle('rotate-0');
+                }
+                dropdown()
+            </script>
+        </aside>
+    <div class=" right-0  w-screen bg-purple-200">
+        <div class="top-0 right-0 w-[95vm] h-14 flex items-center justify-center shadow-md">
+            <div class="w-11/12 flex items-center">
+                <div class="flex-[3] flex justify-center">    
+                    <input type="text" class="bg-purple-200 border-none p-2 w-1/2" placeholder="search...."> 
+                    <button type="submit" class="w-10 h-10 border-none items-center justify-center"><i class="fa fa-search" aria-hidden="true"></i></button>               
+                </div>
+                <div class="flex-1 flex justify-between items-center">
+                    <a href="#" class="py-1 px-2 text-center"></a>
+                    <div class="flex-1 flex justify-between items-center">
+                        <a href="#" class="py-1 px-2 text-center"></a>
+                        <div class="relative inline-block">
+                            <!-- Trigger element -->
+                            <div class="flex items-center space-x-2" id="profileTrigger">
+                              <img src="avatar-removebg-preview.png" alt="Profile Image" class="w-10 h-10 rounded-full">
+                            
+                            </div>
+                            
+                            <!-- Profile popover -->
+                            <div class="hidden absolute z-10 -mt-4 p-2 bg-white shadow-md rounded-md" id="profilePopover">
+                              <div class="text-gray-800">Change avatar</div>
+                              <div class="text-gray-500">help</div>
+                              <div class="text-gray-500">Logout</div>
+                              <!-- Additional profile information -->
+                            </div>
+                          </div>
+                          
+                          <script>
+                            const profileTrigger = document.getElementById('profileTrigger');
+                            const profilePopover = document.getElementById('profilePopover');
+                          
+                            // Event listener for mouse enter to show profile popover
+                            profileTrigger.addEventListener('mouseenter', () => {
+                              profilePopover.classList.remove('hidden');
+                            });
+                          
+                            // Event listener for mouse leave to hide profile popover
+                            profileTrigger.addEventListener('mouseleave', () => {
+                              profilePopover.classList.add('hidden');
+                            });
+                          </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="mt-4 ml-8">
+                <ul>
+                    <li class="list-disc text-xl"><b>RESULT ANALYZER</b></li>
+                </ul>
+            </div>
+            <div class="mt-12 ml-4 flex">
+                <div>
+                <form action="">
+                    <select class="w-32 h-8 ml-6 bg-purple-300" name="year" id="">
+                        <option  class="bg-purple-200 text-center" >Select Sem</option>
+                        <option  class="bg-purple-200 text-center" >1st Sem</option>
+                        <option  class="bg-purple-200 text-center" >2nd Sem</option>
+                        <option  class="bg-purple-200 text-center" >3rd Sem</option>
+                        <option  class="bg-purple-200 text-center" >4th Sem</option>
+                        <option  class="bg-purple-200 text-center" >5th Sem</option>
+                        <option  class="bg-purple-200 text-center" >6th Sem</option>
+                        <option  class="bg-purple-200 text-center" >7th Sem</option>
+                        <option  class="bg-purple-200 text-center" >8th Sem</option>
+                    </select>
+                </form>
+                </div>
+                <div class="ml-6">
+                <form action="">
+                    <select class="w-32 h-8 ml-6 bg-purple-300" name="year" id="">
+                        <option class="bg-purple-200 text-center" value="">Year</option>
+                        <option class="bg-purple-200 text-center"  value="">2020</option>
+                        <option class="bg-purple-200 text-center"  value="">2021</option>
+                        <option class="bg-purple-200 text-center"  value="">2022</option>
+                        <option class="bg-purple-200 text-center"  value="">2023</option>
+                    </select>
+                </form>
+                </div>
+            </div>
+            <div class="py-5 px-4 flex items-center justify-between flex-wrap">
+                <div class="w-60 h-36 my-5 mx-2 bg-fuchsia-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>180</b></h1>
+                        <h3 class="text-gray-800">Total Students</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="student-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="w-60 h-36 my-5 mx-2 bg-sky-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>172</b></h1>
+                        <h3 class="text-gray-800">Passed</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="passed-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="w-60 h-36 my-5 mx-2 bg-red-300 flex items-center justify-around shadow-xl">
+                    <div class="">
+                        <h1><b>8</b></h1>
+                        <h3 class="text-gray-800">Failed</h3>
+                    </div>
+                    <div class="">
+                        <img class="h-12 w-12" src="failed1-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="ml-2">
+                <h2 class="text-2xl ml-8">Top Students</h2>
+            </div>
+            <table class="md:w-[95%] ml-8">
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">S.No</th>
+                    <th class="border-x-[1px] border-black">Student Name</th>
+                    <th class="border-x-[1px] border-black">Sem</th>
+                    <th class="border-x-[1px] border-black">Branch</th>
+                    <th class="border-x-[1px] border-black">Year</th>
+                    <th class="border-x-[1px] border-black">Rank</th>
+                </tr>
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">1</th>
+                    <th class="border-x-[1px] border-black">Vaidehi Dubey</th>
+                    <th class="border-x-[1px] border-black">8th</th>
+                    <th class="border-x-[1px] border-black">CS</th>
+                    <th class="border-x-[1px] border-black">2022</th>
+                    <th class="border-x-[1px] border-black">1st</th>
+                </tr>
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">2</th>
+                    <th class="border-x-[1px] border-black">Sahil Kumar</th>
+                    <th class="border-x-[1px] border-black">8th</th>
+                    <th class="border-x-[1px] border-black">CS</th>
+                    <th class="border-x-[1px] border-black">2022</th>
+                    <th class="border-x-[1px] border-black">2nd</th>
+                </tr>
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">3</th>
+                    <th class="border-x-[1px] border-black">Sidharth Taneja</th>
+                    <th class="border-x-[1px] border-black">8th</th>
+                    <th class="border-x-[1px] border-black">CS</th>
+                    <th class="border-x-[1px] border-black">2022</th>
+                    <th class="border-x-[1px] border-black">3rd</th>
+                </tr>
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">4</th>
+                    <th class="border-x-[1px] border-black">Ruchi Sharma</th>
+                    <th class="border-x-[1px] border-black">8th</th>
+                    <th class="border-x-[1px] border-black">CS</th>
+                    <th class="border-x-[1px] border-black">2022</th>
+                    <th class="border-x-[1px] border-black">4th</th>
+                </tr>
+                <tr class="border-[1px] border-black">
+                    <th class="border-x-[1px] border-black">5</th>
+                    <th class="border-x-[1px] border-black">Alina Khan</th>
+                    <th class="border-x-[1px] border-black">8th</th>
+                    <th class="border-x-[1px] border-black">CS</th>
+                    <th class="border-x-[1px] border-black">2022</th>
+                    <th class="border-x-[1px] border-black">5th</th>
+                </tr>
+            </table>
+        </div>
+        </div>
+        </body>
+        </html>
